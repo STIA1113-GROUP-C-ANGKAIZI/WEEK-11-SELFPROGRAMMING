@@ -1,0 +1,35 @@
+package myArray;
+
+public class LargestElement {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//double [] sales = new double[5];
+		
+		double sales[] = {10.3, 20.5, 50.6, 40.5, 30.9};
+		
+		int index, maxIndex;
+		double largestSale;
+		
+		maxIndex = 0;
+		
+		for (index = 1; index<sales.length; index++) //length=5
+			if (sales[maxIndex] < sales [index])
+				maxIndex = index;
+		
+		System.out.println(maxIndex);
+		System.out.println(index);
+		
+		largestSale = sales[maxIndex];
+		
+		System.out.println(largestSale);
+		
+	}
+
+}
+
+Output:
+2
+5
+50.6
