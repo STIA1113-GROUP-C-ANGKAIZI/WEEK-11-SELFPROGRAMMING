@@ -1,0 +1,39 @@
+package selfProgramming;
+import java.util.Scanner;
+public class AnalyzeNumbers {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int n;
+		
+		Scanner scan = new Scanner (System.in);
+		System.out.print("Enter the number of items: ");
+		n = scan.nextInt();
+		double [] numbers = new double [n];
+		double sum = 0;
+		
+		System.out.print("Enter the numbers: ");
+		for (int i = 0; i < n; i++) {
+			numbers[i] = scan.nextDouble();
+			sum += numbers[i];
+		}
+		
+		double average = sum / n;
+		
+		int count = 0; //the number of elements above average
+		for (int i = 0; i < n; i++)
+			if (numbers[i] > average);
+				count++;
+				
+		System.out.println("Average is " + average);
+		System.out.println("Number of elements above of average is " + count);
+	}
+
+}
+
+Output:
+Enter the number of items: 10
+Enter the numbers: 3.4 5 6 1 6.5 7.8 3.5 8.5 6.3 9.5
+Average is 5.75
+Number of elements above of average is 1
