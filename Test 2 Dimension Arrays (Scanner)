@@ -1,0 +1,40 @@
+package selfProgramming;
+import java.util.Scanner;
+public class Test2DArraysScanner {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int [][] num = new int [3][3];
+		
+		Scanner scan = new Scanner (System.in);
+		
+		System.out.println("Enter " + num.length + " rows and " + num[0].length + " columns: ");
+		for (int x = 0; x < num.length; x++)
+				for(int y = 0; y < num.length; y++)
+					num[x][y] = scan.nextInt();
+		
+		//print
+		for (int i = 0; i < num.length; i++)
+			for(int j = 0; j < num.length; j++)
+			System.out.print(num[i][j] + " ");
+		
+		int total = 0;
+		for (int a = 0; a < num.length; a++) {
+			for (int b = 0; b < num.length; b++) {
+				total  += num [a][b];
+			}
+		}
+		System.out.println("\nThe sum of all elements is " + total);
+		
+	}
+
+}
+
+Output:
+Enter 3 rows and 3 columns: 
+1 5 9
+4 7 8
+3 5 6
+1 5 9 4 7 8 3 5 6 
+The sum of all elements is 48
