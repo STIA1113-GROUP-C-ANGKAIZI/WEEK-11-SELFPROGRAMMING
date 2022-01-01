@@ -1,0 +1,47 @@
+package selfProgramming;
+
+public class MaxAndMin {
+
+	static int max;
+	static int min;
+	
+	public static void max_min(int array[]) {
+		// TODO Auto-generated method stub
+
+		max = array[0];
+		min = array[0];
+		
+		for (int x = 1; x < array.length; x = x + 2) {
+		if (x + 1 > array.length) {
+			if (array [x] > max) max = array[x];
+			if (array [x] < min) min = array[x];
+		}
+		if (array[x] > array[x + 1]) {
+			if (array [x] > max) max = array[x];
+			if (array [x + 1] < min) min = array[x + 1];
+		}
+		if (array[x] < array[x + 1]) {
+			if (array [x] < min) min = array[x];
+			if (array [x + 1] > max) max = array[x + 1];
+		}
+		}
+		
+	}
+
+	public static void main(String[] args) {
+		int [] array = {50, 42, 89, 99, 45, 78, 33, 15, 06};
+		max_min(array);
+		
+		System.out.print("Original Array is ");
+		for (int y=0; y<array.length; y++) {
+		System.out.print(array[y] + " ");
+		}
+		System.out.println(" \nMaximum value = " + max);
+        System.out.println("Minimum value = " + min);
+	}
+}
+
+Output:
+Original Array is 50 42 89 99 45 78 33 15 6  
+Maximum value = 99
+Minimum value = 6
